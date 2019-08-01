@@ -7,7 +7,7 @@ The goal of this project is to provide a minimal base for alt:V projects. This p
 - 👌 Typings included (client, server, natives)
 - ⚡ The fastest bundle times (multi-core compilation, filesystem cache and more)
 - 📦 Out of the box support for HTML and CSS
-- ✨ Built-in Support for CSS pre-processors (LESS, Stylus, [or install SASS](#installingSass))
+- ✨ Built-in Support for CSS pre-processors (LESS, Stylus, [or install SASS](#installing-sass-scss-support))
 
 ---
 
