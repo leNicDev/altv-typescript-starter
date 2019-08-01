@@ -1,0 +1,19 @@
+{
+  "name": "altv-ts-starter",
+  "version": "1.0.0",
+  "description": "An alt:V TypeScript starter project",
+  "author": "leNicDev",
+  "license": "MIT",
+  "scripts": {
+    "build:client": "parcel build ./src/client/index.ts --out-dir dist/client --no-source-maps --target node && cpy src/resource.cfg dist/",
+    "build:server": "parcel build ./src/server/index.ts --out-dir dist/server --no-source-maps --target node && cpy src/resource.cfg dist/",
+    "build": "concurrently \"npm run build:client\" \"npm run build:server\""
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "concurrently": "^4.1.1",
+    "cpy-cli": "^2.0.0",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "~3.5.3"
+  }
+}
