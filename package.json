@@ -1,19 +1,31 @@
 {
-  "name": "altv-ts-starter",
-  "version": "1.0.0",
-  "description": "An alt:V TypeScript starter project",
+  "name": "brp",
+  "version": "0.0.1",
+  "description": "The final alt:V TypeScript boilerplate",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:manifest": "cpy ./resource.cfg ./dist/",
+    "build:client": "parcel build ./src/client/client.ts --out-dir ./dist/client --no-source-maps --target node",
+    "build:server": "parcel build ./src/server/server.ts --out-dir ./dist/server --no-source-maps --target node",
+    "build": "npm run build:client && npm run build:server && npm run build:manifest"
+  },
+  "keywords": [
+    "altv",
+    "typescript",
+    "starter",
+    "boilerplate"
+  ],
   "author": "leNicDev",
   "license": "MIT",
-  "scripts": {
-    "build:client": "parcel build ./src/client/index.ts --out-dir dist/client --no-source-maps --target node && cpy src/resource.cfg dist/",
-    "build:server": "parcel build ./src/server/index.ts --out-dir dist/server --no-source-maps --target node && cpy src/resource.cfg dist/",
-    "build": "concurrently \"npm run build:client\" \"npm run build:server\""
-  },
   "devDependencies": {
-    "@types/node": "^12.6.8",
-    "concurrently": "^4.1.1",
-    "cpy-cli": "^2.0.0",
-    "parcel-bundler": "^1.12.3",
-    "typescript": "~3.5.3"
+    "@altv/types-client": "^1.1.0",
+    "@altv/types-natives": "^1.1.0",
+    "@altv/types-server": "^1.2.0",
+    "@altv/types-webview": "^1.0.2",
+    "@types/node": "^12.0.0",
+    "cpy-cli": "^3.1.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.7"
   }
 }
