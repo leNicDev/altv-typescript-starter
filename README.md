@@ -4,7 +4,7 @@ The goal of this project is to provide a minimal base for alt:V projects. This p
 
 ### Features
 - 💆 Zero configuration (thanks to [Parcel](https://github.com/parcel-bundler/parcel))
-- 👌 Typings included (client, server, natives)
+- 👌 Typings included (client, server, natives, webview)
 - ⚡ The fastest bundle times (multi-core compilation, filesystem cache and more)
 - 📦 Out of the box support for HTML and CSS
 - ✨ Built-in Support for CSS pre-processors (LESS, Stylus, [or install SASS](#installing-sass-scss-support))
@@ -31,17 +31,6 @@ yarn build
 
 # NPM
 npm run build
-```
-
-You can also build the client and server resources seperately:
-```bash
-# Yarn
-yarn build:client
-yarn build:server
-
-# NPM
-npm run build:client
-npm run build:server
 ```
 
 ## Installing SASS (SCSS support)<a href="installingSass"></a>
